@@ -1,0 +1,36 @@
+﻿@model OtelMvcProje.Models.Entity.TblMesaj
+
+<div class="map-content-9 mt-lg-0 mt-4">
+    <form method="post" id="form-submits">
+        <div class="twice-two">
+            <input type="text" class="form-control" name="Gonderen" placeholder="Adınız" required="">
+            <input type="text" class="form-control" name="Mail" placeholder="Mail"required="">
+        </div>
+        <div class="twice">
+            <input type="text" class="form-control" name="Konu" placeholder="Konu" required="">
+        </div>
+        <textarea name="Mesaj" class="form-control" placeholder="Mesaj" required=""></textarea>
+        <button onclick="func1()" type="submit" class="btn btn-contact" data-toggle="modal" data-target="#Modal1">Mesaj Yolla</button>
+        <div class="modal" id="Modal1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title" style="text-align: center">Mesaj Gönderildi.</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    @* pop-up butona tıkalndığında mesaj başarılı bir şekilde gönderildi yazsın.*@
+    </form>
+
+</div>
+
+<script>
+    function func1() {
+        setTimeout(function () {
+            document.getElementById('form-submits').onsubmit = 'return false'
+            location.reload()
+        }, 3000);
+        
+    }
+</script>

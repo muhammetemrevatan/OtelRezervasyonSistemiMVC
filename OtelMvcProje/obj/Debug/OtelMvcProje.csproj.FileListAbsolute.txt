@@ -74,3 +74,7 @@ C:\Users\vatan\source\repos\OtelMvcProje\OtelMvcProje\obj\Debug\OtelMvcProje.csp
 C:\Users\vatan\source\repos\OtelMvcProje\OtelMvcProje\obj\Debug\OtelMvcProje.csproj.CopyComplete
 C:\Users\vatan\source\repos\OtelMvcProje\OtelMvcProje\obj\Debug\OtelMvcProje.dll
 C:\Users\vatan\source\repos\OtelMvcProje\OtelMvcProje\obj\Debug\OtelMvcProje.pdb
+C:\Users\vatan\source\repos\OtelMvcProje\OtelMvcProje\bin\EntityFramework.dll
+C:\Users\vatan\source\repos\OtelMvcProje\OtelMvcProje\bin\EntityFramework.SqlServer.dll
+C:\Users\vatan\source\repos\OtelMvcProje\OtelMvcProje\bin\EntityFramework.xml
+C:\Users\vatan\source\repos\OtelMvcProje\OtelMvcProje\bin\EntityFramework.SqlServer.xml
