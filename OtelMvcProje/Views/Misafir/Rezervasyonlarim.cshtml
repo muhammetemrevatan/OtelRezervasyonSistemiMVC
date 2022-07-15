@@ -11,19 +11,20 @@
 <br />
 <table class="table table-bordered">
     <tr>
-        <th>Misafir Ad Soyad</th>
+        <th>Rezerve Ad Soyad</th>
         <th>Giriş Tarihi</th>
         <th>Çıkış Tarihi</th>
         <th>Kişi</th>
+        <th>Detay</th>
     </tr>
     @foreach (var item in Model)
     {
-        <tr>
-            <td>@item.TblMisafir.AdSoyad</td>
-            <td>@item.GirisTarih</td>
-            <td>@item.CikisTarih</td>
-            <td>@item.Kisi</td>
-        </tr>
+    <tr>
+        <td>@item.RezervasyonAdSoyad</td>
+        <td>@(((DateTime)item.GirisTarih).ToString("dd-MMM-yyyy"))</td>
+        <td>@(((DateTime)item.CikisTarih).ToString("dd-MMM-yyyy"))</td>
+        <td>@item.Kisi</td>
+        <td><a href="#" class="btn btn-primary">Detaylar</a></td>
+    </tr>
     }
 </table>
-@ViewBag.a

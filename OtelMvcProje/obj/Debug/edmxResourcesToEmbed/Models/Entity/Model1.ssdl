@@ -62,7 +62,7 @@
     <Property Name="RezervasyonAdSoyad" Type="nvarchar" MaxLength="30" />
     <Property Name="Telefon" Type="nvarchar" MaxLength="20" />
     <Property Name="Aciklana" Type="nvarchar" MaxLength="500" />
-    <Property Name="Durum" Type="int" Nullable="false" />
+    <Property Name="Durum" Type="int" />
   </EntityType>
   <EntityType Name="TblYeniKayit">
     <Key>

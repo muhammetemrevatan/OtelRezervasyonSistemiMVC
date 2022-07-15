@@ -23,7 +23,7 @@ namespace OtelMvcProje.Models.Entity
         public string RezervasyonAdSoyad { get; set; }
         public string Telefon { get; set; }
         public string Aciklana { get; set; }
-        public int Durum { get; set; }
+        public Nullable<int> Durum { get; set; }
     
         public virtual TblMisafir TblMisafir { get; set; }
     }

@@ -29,75 +29,72 @@
 </head>
 <body>
     <div class="header">
-        <h1>Hotel Rezervasyon Sayfası</h1>
+        <h1>Otel Rezervasyon Sayfası</h1>
     </div>
 
     <div class="banner-top">
         <h2>Hemen Rezervasyonunu Yap</h2>
-        <div class="banner-bottom">
-            <div class="bnr-one">
-                <div class="bnr-left">
-                    <p>Giriş Tarihi</p>
+        <form method="post">
+            <div class="banner-bottom">
+                <div class="bnr-one">
+                    <div class="bnr-left">
+                        <p>Giriş Tarihi</p>
+                    </div>
+                    <div class="bnr-right">
+                        <input type="date" name="GirisTarih" required="" class="form-control"/>
+                    </div>
+                    <div class="clearfix"></div>
                 </div>
-                <div class="bnr-right">
-                    <input class="date" id="datepicker" type="text" value="" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}" required=""/>
+                <div class="bnr-one">
+                    <div class="bnr-left">
+                        <p>Çıkış Tarihi</p>
+                    </div>
+                    <div class="bnr-right">
+                        <input type="date" name="CikisTarih" required="" class="form-control"/>
+                    </div>
+                    <div class="clearfix"></div>
                 </div>
-                <div class="clearfix"></div>
-            </div>
-            <div class="bnr-one">
-                <div class="bnr-left">
-                    <p>Çıkış Tarihi</p>
+                <div class="bnr-one">
+                    <div class="bnr-left">
+                        <p>Kişi Sayısı</p>
+                    </div>
+                    <div class="bnr-right">
+                        <input type="number" class="form-control" name="Kisi" value="1"/>
+                    </div>
+                    <div class="clearfix"></div>
                 </div>
-                <div class="bnr-right">
-                    <input class="date" id="datepicker1" type="text" value="" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}" required=""/>
+                <div class="bnr-one">
+                    <div class="bnr-left">
+                        <p>Ad Soyad</p>
+                    </div>
+                    <div class="bnr-right ">
+                        <input type="text" name="RezervasyonAdSoyad" class="form-control" />
+                    </div>
+                    <div class="clearfix"></div>
                 </div>
-                <div class="clearfix"></div>
-            </div>
-            <div class="bnr-one">
-                <div class="bnr-left">
-                    <p>Kişi Sayısı</p>
+                <div class="bnr-one">
+                    <div class="bnr-left">
+                        <p>Telefon</p>
+                    </div>
+                    <div class="bnr-right">
+                        <input type="text" name="Telefon" class="form-control"/>
+                    </div>
+                    <div class="clearfix"></div>
                 </div>
-                <div class="bnr-right">
-                    <select>
-                        <option class="rm" value="volvo">Kişi Sayısı Seçin</option>
-                        <option class="rm" value="volvo">1</option>
-                        <option class="rm" value="saab">2</option>
-                        <option class="rm" value="opel">3</option>
-                        <option class="rm" value="audi">4+</option>
-                    </select>
+                <div class="bnr-one">
+                    <div class="bnr-left">
+                        <p>Açıklama</p>
+                    </div>
+                    <div class="bnr-right">
+                        <textarea name="Aciklana" rows="4" class="form-control"></textarea>
+                    </div>
+                    <div class="clearfix"></div>
                 </div>
-                <div class="clearfix"></div>
-            </div>
-            <div class="bnr-one">
-                <div class="bnr-left">
-                    <p>Ad Soyad</p>
-                </div>
-                <div class="bnr-right">
-                    <input type="text"/>
-                </div>
-                <div class="clearfix"></div>
-            </div>
-            <div class="bnr-one">
-                <div class="bnr-left">
-                    <p>Oda Türü</p>
-                </div>
-                <div class="bnr-right">
-                    <select>
-                        <option value="volvo">Bir Tür Seçin</option>
-                        <option value="saab">Tek Kişilik</option>
-                        <option value="opel">Çift Kişilik</option>
-                        <option value="audi">Üç Kişilik</option>
-                        <option value="audi">Dörts Kişilik</option>
-                    </select>
-                </div>
-                <div class="clearfix"></div>
-            </div>
-            <div class="bnr-btn">
-                <form>
+                <div class="bnr-btn">
                     <input type="submit" value="Rezervasyon Yap">
-                </form>
+                </div>
             </div>
-        </div>
+        </form>
         <!---start-date-piker---->
         <link rel="stylesheet" href="~/hotels-starter/hotels-starter/Rezervasyon/css/jquery-ui.css" />
         <script src="~/hotels-starter/hotels-starter/Rezervasyon/js/jquery-ui.js"></script>

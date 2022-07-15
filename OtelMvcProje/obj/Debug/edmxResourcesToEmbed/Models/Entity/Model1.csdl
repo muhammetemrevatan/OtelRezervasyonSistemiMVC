@@ -85,7 +85,7 @@
     <Property Name="RezervasyonAdSoyad" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
     <Property Name="Telefon" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
     <Property Name="Aciklana" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-    <Property Name="Durum" Type="Int32" Nullable="false" />
+    <Property Name="Durum" Type="Int32" />
     <NavigationProperty Name="TblMisafir" Relationship="DbOtelModel.FK_TblRezervasyon_TblMisafir" FromRole="TblRezervasyon" ToRole="TblMisafir" />
   </EntityType>
   <Association Name="FK_TblRezervasyon_TblMisafir">
