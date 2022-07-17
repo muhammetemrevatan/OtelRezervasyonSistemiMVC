@@ -1,5 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="DbOtelModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="TblEkibimiz">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AdSoyad" Type="nvarchar" MaxLength="50" />
+    <Property Name="Unvan" Type="nvarchar" MaxLength="50" />
+    <Property Name="Gorsel" Type="nvarchar" MaxLength="250" />
+  </EntityType>
   <EntityType Name="TblHakkimda">
     <Key>
       <PropertyRef Name="ID" />
@@ -21,6 +30,13 @@
     <Property Name="Mail" Type="nvarchar" MaxLength="50" />
     <Property Name="Adress" Type="nvarchar" MaxLength="250" />
   </EntityType>
+  <EntityType Name="TblMailBirakanlar">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Mail" Type="nvarchar" MaxLength="100" />
+  </EntityType>
   <EntityType Name="TblMesaj">
     <Key>
       <PropertyRef Name="MesajID" />
@@ -30,6 +46,17 @@
     <Property Name="Mail" Type="nvarchar" MaxLength="50" />
     <Property Name="Konu" Type="nvarchar" MaxLength="100" />
     <Property Name="Mesaj" Type="nvarchar" MaxLength="1000" />
+  </EntityType>
+  <EntityType Name="TblMesaj2">
+    <Key>
+      <PropertyRef Name="MesajID" />
+    </Key>
+    <Property Name="MesajID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Gonderen" Type="nvarchar" MaxLength="100" />
+    <Property Name="Alici" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Konu" Type="nvarchar" MaxLength="100" />
+    <Property Name="Mesaj" Type="nvarchar(max)" />
+    <Property Name="Tarih" Type="date" />
   </EntityType>
   <EntityType Name="TblMisafir">
     <Key>
@@ -47,6 +74,18 @@
     <Property Name="Ulke" Type="int" />
     <Property Name="sehir" Type="int" />
     <Property Name="ilce" Type="int" />
+    <Property Name="Durum" Type="int" />
+  </EntityType>
+  <EntityType Name="TblOda">
+    <Key>
+      <PropertyRef Name="OdaID" />
+    </Key>
+    <Property Name="OdaID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OdaNo" Type="char" MaxLength="3" />
+    <Property Name="Kat" Type="varchar" MaxLength="2" />
+    <Property Name="Kapasite" Type="char" MaxLength="1" />
+    <Property Name="Aciklama" Type="nvarchar" MaxLength="200" />
+    <Property Name="Telefon" Type="char" MaxLength="4" />
     <Property Name="Durum" Type="int" />
   </EntityType>
   <EntityType Name="TblRezervasyon">
@@ -86,15 +125,35 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_TblRezervasyon_TblOda">
+    <End Role="TblOda" Type="Self.TblOda" Multiplicity="0..1" />
+    <End Role="TblRezervasyon" Type="Self.TblRezervasyon" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblOda">
+        <PropertyRef Name="OdaID" />
+      </Principal>
+      <Dependent Role="TblRezervasyon">
+        <PropertyRef Name="Oda" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <EntityContainer Name="DbOtelModelStoreContainer">
+    <EntitySet Name="TblEkibimiz" EntityType="Self.TblEkibimiz" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TblHakkimda" EntityType="Self.TblHakkimda" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TblIletisim" EntityType="Self.TblIletisim" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblMailBirakanlar" EntityType="Self.TblMailBirakanlar" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TblMesaj" EntityType="Self.TblMesaj" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblMesaj2" EntityType="Self.TblMesaj2" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TblMisafir" EntityType="Self.TblMisafir" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblOda" EntityType="Self.TblOda" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TblRezervasyon" EntityType="Self.TblRezervasyon" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TblYeniKayit" EntityType="Self.TblYeniKayit" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK_TblRezervasyon_TblMisafir" Association="Self.FK_TblRezervasyon_TblMisafir">
       <End Role="TblMisafir" EntitySet="TblMisafir" />
+      <End Role="TblRezervasyon" EntitySet="TblRezervasyon" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblRezervasyon_TblOda" Association="Self.FK_TblRezervasyon_TblOda">
+      <End Role="TblOda" EntitySet="TblOda" />
       <End Role="TblRezervasyon" EntitySet="TblRezervasyon" />
     </AssociationSet>
   </EntityContainer>

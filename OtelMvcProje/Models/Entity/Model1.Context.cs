@@ -31,5 +31,9 @@ namespace OtelMvcProje.Models.Entity
         public virtual DbSet<TblYeniKayit> TblYeniKayits { get; set; }
         public virtual DbSet<TblMisafir> TblMisafirs { get; set; }
         public virtual DbSet<TblRezervasyon> TblRezervasyons { get; set; }
+        public virtual DbSet<TblMesaj2> TblMesaj2 { get; set; }
+        public virtual DbSet<TblOda> TblOdas { get; set; }
+        public virtual DbSet<TblMailBirakanlar> TblMailBirakanlars { get; set; }
+        public virtual DbSet<TblEkibimiz> TblEkibimizs { get; set; }
     }
 }

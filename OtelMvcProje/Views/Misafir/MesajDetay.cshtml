@@ -1,0 +1,25 @@
+﻿@model OtelMvcProje.Models.Entity.TblMesaj2
+@{
+    ViewBag.Title = "MesajDetay";
+    Layout = "~/Views/Shared/_MisafirLayout.cshtml";
+}
+
+
+<br />
+<h2>Mesaj Detayı</h2>
+<br />
+
+<h5 class="text-muted">GÖNDEREN</h5>
+@Html.TextBoxFor(x => x.Gonderen, new { @disabled = "true", @class = "form-control" })
+<br />
+<h5 class="text-muted">ALICI</h5>
+@Html.TextBoxFor(x => x.Alici, new { @readonly = "readonly", @class = "form-control" })
+<br />
+<h5 class="text-muted">TARİH</h5>
+@Html.TextBoxFor(x => x.Tarih, new { @readonly = "readonly", @class = "form-control" })
+<br />
+<h5 class="text-muted">KONU</h5>
+@Html.TextBoxFor(x => x.Konu, new { @readonly = "readonly", @class = "form-control text-uppercase" })
+<br />
+<h5 class="text-muted">MESAJ</h5>
+@Html.TextAreaFor(x => x.Mesaj,10,4, new { @readonly = "readonly", @class = "form-control text-capitalize" })

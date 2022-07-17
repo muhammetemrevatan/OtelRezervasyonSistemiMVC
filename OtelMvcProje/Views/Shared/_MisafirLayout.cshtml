@@ -11,14 +11,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Charts - SB Admin</title>
+    <title>Misafir Paneli</title>
     <link href="~/hotels-starter/hotels-starter/WebMisafirPanel/css/styles.css" rel="stylesheet" />
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
 </head>
 <body class="sb-nav-fixed">
     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
         <!-- Navbar Brand-->
-        <a class="navbar-brand ps-3" href="index.html">Otel Misafir Paneli</a>
+        <a class="navbar-brand ps-3" href="/Misafir/LogOut">Otel Misafir Paneli</a>
         <!-- Sidebar Toggle-->
         <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
         <!-- Navbar Search-->
@@ -34,7 +34,7 @@
                 <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                     <li><a class="dropdown-item" href="/Misafir/Index">Ayarlar</a></li>
-                    <li><a class="dropdown-item" href="/AnaSayfa/Index">Ana Sayfa</a></li>
+                    <li><a class="dropdown-item" href="/Misafir/LogOut">Ana Sayfa</a></li>
                     <li><hr class="dropdown-divider" /></li>
                     <li><a class="dropdown-item" href="/Misafir/LogOut">Çıkış Yap</a></li>
                 </ul>
@@ -47,23 +47,27 @@
                 <div class="sb-sidenav-menu">
                     <div class="nav">
                         <div class="sb-sidenav-menu-heading">Menuler</div>
-                        <a class="nav-link" href=/Misafir/Index/>
-                            <div class="sb-nav-link-icon"><i class="fas fa-book"></i></div>
-                            Profilim
+                        <a class="nav-link" href=/Misafir/Index />
+                        <div class="sb-nav-link-icon"><i class="fas fa-book"></i></div>
+                        Profilim
                         </a>
                         <a class="nav-link collapsed" href="/Misafir/Rezervasyonlarim/">
                             <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                             Rezervasyonlarım
                         </a>
-                        <a class="nav-link collapsed" href="#">
+                        <a class="nav-link collapsed" href="/Misafir/GelenMesajlar/">
                             <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
-                            Mesajlarım
+                            Gelen Mesajlar
+                        </a>
+                        <a class="nav-link collapsed" href="/Misafir/GidenMesajlar/">
+                            <div class="sb-nav-link-icon"><i class="fas fa-inbox"></i></div>
+                            Giden Mesajlar
                         </a>
                         <a class="nav-link" href="/Rezervasyon/Index">
                             <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                             Yeni Rezervayon
                         </a>
-                        <a class="nav-link" href="/AnaSayfa/Index">
+                        <a class="nav-link" href="/Misafir/LogOut">
                             <div class="sb-nav-link-icon"><i class="fas fa-home"></i></div>
                             AnaSayfa
                         </a>

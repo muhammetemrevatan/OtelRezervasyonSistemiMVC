@@ -155,16 +155,28 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\Entity\TblEkibimiz.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Entity\TblHakkimda.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Entity\TblIletisim.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Entity\TblMailBirakanlar.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Entity\TblMesaj.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Entity\TblMesaj2.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Entity\TblMisafir.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entity\TblOda.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Entity\TblRezervasyon.cs">
@@ -337,6 +349,12 @@
     <Content Include="Views\Shared\_MisafirLayout.cshtml" />
     <Content Include="Views\Misafir\Index.cshtml" />
     <Content Include="Views\Misafir\Rezervasyonlarim.cshtml" />
+    <Content Include="Views\Misafir\GelenMesajlar.cshtml" />
+    <Content Include="Views\Misafir\GidenMesajlar.cshtml" />
+    <Content Include="Views\Misafir\MesajDetay.cshtml" />
+    <Content Include="Views\Misafir\YeniMesaj.cshtml" />
+    <Content Include="Views\Default\Ekibimiz.cshtml" />
+    <Content Include="Views\Default\istatistik.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

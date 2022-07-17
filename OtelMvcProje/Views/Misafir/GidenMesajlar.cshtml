@@ -1,0 +1,31 @@
+﻿@using OtelMvcProje.Models.Entity
+@model List<TblMesaj2>
+@{
+    ViewBag.Title = "GidenMesajlar";
+    Layout = "~/Views/Shared/_MisafirLayout.cshtml";
+}
+
+<br />
+<h2>Giden Mesajlar</h2>
+<br />
+<table class="table table-bordered">
+    <tr>
+        <th>Alıcı</th>
+        <th>Konu</th>
+        <th>Tarih</th>
+        <th>Mesajı Görüntüle</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Alici</td>
+            <td>@item.Konu</td>
+            <td>@(((DateTime)item.Tarih).ToString("dd-MMM-yyyy"))</td>
+            <td><a href="/Misafir/MesajDetay/@item.MesajID" class="btn btn-info form-control" style="color:azure"><strong>Görüntüle</strong></a></td>
+        </tr>
+    }
+</table>
+
+<div class="form-control">
+    <a href="/Misafir/YeniMesaj/" class="btn btn-success form-control">Yeni Mesaj</a>
+</div>
