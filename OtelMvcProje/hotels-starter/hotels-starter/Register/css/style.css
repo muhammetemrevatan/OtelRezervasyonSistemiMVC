@@ -197,7 +197,7 @@ i.fa.fa-facebook, i.fa.fa-twitter, i.fa.fa-google-plus {
 	border:none;
     width: 90%;
     padding-left: 15px;
-    display: inline-block;
+    display: block;
     background: transparent;
 	font-family: 'Noto Sans', sans-serif;
 }
@@ -215,7 +215,6 @@ i.fa.fa-facebook, i.fa.fa-twitter, i.fa.fa-google-plus {
 }
 .header-left-bottom input[type="submit"] {
     background: #c4514c;
-    background: #4CAF50;
     color: #FFF;
     font-size: 16px;
     padding: .5em 1em;
@@ -225,17 +224,13 @@ i.fa.fa-facebook, i.fa.fa-twitter, i.fa.fa-google-plus {
     -webkit-transition: 0.5s all;
     -moz-transition: 0.5s all;
     -o-transition: 0.5s all;
-    display: inline-block;
+    display: block;
     cursor: pointer;
     outline: none;
     border: none;
 	font-family: 'Noto Sans', sans-serif;
 }
 .header-left-bottom input[type="submit"]:hover {
-    background: #11732b;
-    background: #ffc772;
-    background: #015f86;
-    background: #0091cd;
     transition: 0.5s all;
     -webkit-transition: 0.5s all;
     -moz-transition: 0.5s all;
@@ -247,7 +242,7 @@ i.fa.fa-facebook, i.fa.fa-twitter, i.fa.fa-google-plus {
     font-weight: 400;
     color: #ececec;
     color: #1f1f1f;
-    display: inline-block;
+    display: block;
     text-align: center;
     font-style: italic;
     width: 100%;

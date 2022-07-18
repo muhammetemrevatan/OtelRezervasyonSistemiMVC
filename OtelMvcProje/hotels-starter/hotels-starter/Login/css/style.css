@@ -337,9 +337,33 @@ label.check {
     -webkit-flex-basis: 100%;
 }
 
+.w3ls-login input[type=button] {
+    color: #0c3323;
+    width: 100%;
+    padding: 0.5em 0;
+    font-size: 1em;
+    font-weight: 900;
+    letter-spacing: 2px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: rgba(255, 255, 255, 0.5);
+    font-family: 'Amiri', serif;
+    transition: 0.5s all ease;
+    -webkit-transition: 0.5s all ease;
+    -moz-transition: 0.5s all ease;
+    -o-transition: 0.5s all ease;
+    -ms-transition: 0.5s all ease;
+}
+
+.w3ls-login input[type=button]:hover {
+    color: #ff0000;
+    box-shadow: 0px 4px 4px 4px rgba(234, 15, 15, 0.30);
+    transform: translateY(4px);
+}
+
 .w3ls-login input[type=submit] {
     color: #000000;
-    font-weight: 100;
     width: 100%;
     padding: 0.4em 0;
     font-size: 1em;
@@ -348,7 +372,7 @@ label.check {
     cursor: pointer;
     border: none;
     outline: none;
-    background: rgba(255, 255, 255, 0.38);
+    background: rgba(255, 255, 255, 0.4);
     font-family: 'Amiri', serif;
     transition: 0.5s all ease;
     -webkit-transition: 0.5s all ease;
@@ -358,9 +382,8 @@ label.check {
 }
 
 .w3ls-login input[type=submit]:hover {
-    color: #fff;
-    box-shadow: 0 20px 5px -10px rgba(0, 0, 0, 0.4);
-    transform: translateY(5px);
+    color: #0c3323;
+    box-shadow: 0px 0px 4px 4px rgba(0, 255, 29, 0.30);
 }
 
 .w3ls-bot {
