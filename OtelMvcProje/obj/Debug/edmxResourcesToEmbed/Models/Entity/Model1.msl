@@ -68,6 +68,9 @@
     <EntitySetMapping Name="TblRezervasyons">
       <EntityTypeMapping TypeName="DbOtelModel.TblRezervasyon">
         <MappingFragment StoreEntitySet="TblRezervasyon">
+          <ScalarProperty Name="Kisi4" ColumnName="Kisi4" />
+          <ScalarProperty Name="Kisi3" ColumnName="Kisi3" />
+          <ScalarProperty Name="Kisi2" ColumnName="Kisi2" />
           <ScalarProperty Name="Durum" ColumnName="Durum" />
           <ScalarProperty Name="Aciklana" ColumnName="Aciklana" />
           <ScalarProperty Name="Telefon" ColumnName="Telefon" />
@@ -120,6 +123,21 @@
           <ScalarProperty Name="Gorsel" ColumnName="Gorsel" />
           <ScalarProperty Name="Unvan" ColumnName="Unvan" />
           <ScalarProperty Name="AdSoyad" ColumnName="AdSoyad" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblOnRezervasyons">
+      <EntityTypeMapping TypeName="DbOtelModel.TblOnRezervasyon">
+        <MappingFragment StoreEntitySet="TblOnRezervasyon">
+          <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+          <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+          <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+          <ScalarProperty Name="Kisi" ColumnName="Kisi" />
+          <ScalarProperty Name="CikisTarih" ColumnName="CikisTarih" />
+          <ScalarProperty Name="GirisTarih" ColumnName="GirisTarih" />
+          <ScalarProperty Name="AdSoyad" ColumnName="AdSoyad" />
+          <ScalarProperty Name="Mail" ColumnName="Mail" />
           <ScalarProperty Name="ID" ColumnName="ID" />
         </MappingFragment>
       </EntityTypeMapping>

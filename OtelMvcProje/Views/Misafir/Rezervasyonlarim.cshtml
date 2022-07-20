@@ -1,6 +1,6 @@
 ﻿
 @using OtelMvcProje.Models.Entity
-@model List<TblRezervasyon>
+@model List<TblOnRezervasyon>
 
 @{
     ViewBag.Title = "Rezervasyonlarim";
@@ -20,7 +20,7 @@
     @foreach (var item in Model)
     {
     <tr>
-        <td>@item.RezervasyonAdSoyad</td>
+        <td>@item.AdSoyad</td>
         <td>@(((DateTime)item.GirisTarih).ToString("dd-MMM-yyyy"))</td>
         <td>@(((DateTime)item.CikisTarih).ToString("dd-MMM-yyyy"))</td>
         <td>@item.Kisi</td>
